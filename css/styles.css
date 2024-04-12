@@ -1,0 +1,73 @@
+body {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    width: 18.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 3px 1px rgb(35, 35, 35);
+    border: 1px solid rgb(138, 137, 137);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    /* make background transparent so we can see the body background linear color */
+    background-color: rgba(0, 0, 0, .3);
+    border-top: 1px solid rgb(138, 137, 137);
+
+}
+
+.container-fluid {
+    position: relative;
+    z-index: 1;
+}
+
+#offcanvasExample {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    form>div {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+@media screen and (max-width: 636px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
